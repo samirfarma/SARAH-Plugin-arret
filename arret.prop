@@ -1,0 +1,10 @@
+{
+  "modules" : { 
+    "arret"  : {
+      "description": "Sarah éteint l'ordinateur",
+      "version": "1.0",
+      "Catégorie": "Framework",
+	  "Auteur": "Samir SEMAI"
+    }
+  }
+}

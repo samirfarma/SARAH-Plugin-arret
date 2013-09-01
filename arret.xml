@@ -1,0 +1,22 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleArret" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleArret" scope="public">
+    <tag>out.action=new Object(); </tag>
+    <one-of>
+      <item><ruleref uri="#ruleAr"/><tag>out.action = rules.ruleAr;</tag></item>
+    </one-of>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/plugins/arret";</tag>
+  </rule>
+  
+    <rule id="ruleAr">
+    <example>Sarah éteint / redémarre l'ordinateur </example>
+	<item weight="7">Sarah</item>
+	<one-of>
+		<item>redémarre<tag>out._key="redemarreOrdi";</tag></item>
+		<item>éteint<tag>out._key="arretOrdi";</tag></item>
+		<item>éteint immédiatement<tag>out._key="arretOrdiImmediat";</tag></item>
+		<item>éteint dans cinq minutes<tag>out._key="arretOrdi5min";</tag></item>
+	</one-of>
+	<item weight="7">l'ordinateur</item>
+  </rule>
+ 
+</grammar>
